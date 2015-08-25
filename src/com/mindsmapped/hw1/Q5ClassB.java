@@ -1,17 +1,17 @@
 package com.mindsmapped.hw1;
 
 public class Q5ClassB extends Q5ClassA {
-	public Q5ClassB() {
-		System.out.println("ClassB constructor");
-	}
+    public Q5ClassB() {
+        System.out.println("ClassB constructor");
+    }
 
-	// public static void methodOne(int i) { }
-	public void methodTwo(int i) {
-	}
+    // public static void methodOne(int i) { }
+    public void methodTwo(int i) {
+    }
 
-	// public void methodThree(int i) { }
-	public static void methodFour(int i) {
-	}
+    // public void methodThree(int i) { }
+    public static void methodFour(int i) {
+    }
 }
 
 /*

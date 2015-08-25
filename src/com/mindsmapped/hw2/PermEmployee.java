@@ -1,26 +1,26 @@
 package com.mindsmapped.hw2;
 
 public class PermEmployee extends Employee {
-	private int employeeNumber;
-	private String deptName;
-	
-	public int getEmployeeNumber() {
-		return employeeNumber;
-	}
+    private int employeeNumber;
+    private String deptName;
 
-	public void setEmployeeNumber(int employeeNumber) {
-		this.employeeNumber = employeeNumber;
-	}
+    public int getEmployeeNumber() {
+        return employeeNumber;
+    }
 
-	public String getDeptName() {
-		return deptName;
-	}
+    public void setEmployeeNumber(int employeeNumber) {
+        this.employeeNumber = employeeNumber;
+    }
 
-	public void setDeptName(String deptName) {
-		this.deptName = deptName;
-	}
+    public String getDeptName() {
+        return deptName;
+    }
 
-	public void getManagerName() {
-		System.out.println("In method getManagerName of PermEmployee class.");
-	}
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
+    }
+
+    public void getManagerName() {
+        System.out.println("In method getManagerName of PermEmployee class.");
+    }
 }

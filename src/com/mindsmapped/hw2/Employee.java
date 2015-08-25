@@ -21,62 +21,62 @@
 package com.mindsmapped.hw2;
 
 public class Employee {
-	private String name;
-	private int id;
-	private int phone;
-	private String address;
-	
-	public String getName() {
-		return name;
-	}
+    private String name;
+    private int id;
+    private int phone;
+    private String address;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public int getPhone() {
-		return phone;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setPhone(int phone) {
-		this.phone = phone;
-	}
+    public int getPhone() {
+        return phone;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
-	public void dailyTask() {
-		System.out.println("In method dailyTask of Employee class.");
-	}
-	
-	public void statusReport() {
-		System.out.println("In method statusReport of Employee class.");
-	}
-	
-	public static void main(String args[]) {
-		Employee e = new Employee();
-		e.dailyTask();
-		e.statusReport();
-		
-		TempEmployee te = new TempEmployee();
-		te.calculateContractPeriod();
-		
-		PermEmployee pe = new PermEmployee();
-		pe.getManagerName();
-	}
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void dailyTask() {
+        System.out.println("In method dailyTask of Employee class.");
+    }
+
+    public void statusReport() {
+        System.out.println("In method statusReport of Employee class.");
+    }
+
+    public static void main(String args[]) {
+        Employee e = new Employee();
+        e.dailyTask();
+        e.statusReport();
+
+        TempEmployee te = new TempEmployee();
+        te.calculateContractPeriod();
+
+        PermEmployee pe = new PermEmployee();
+        pe.getManagerName();
+    }
 }
 
 

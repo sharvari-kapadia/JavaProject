@@ -2,22 +2,22 @@ package com.mindsmapped.hw1;
 
 
 public class Q2VariableScope extends Q2TestProtected {
-	public Q2VariableScope() {
-		System.out.println(rollno);
-		printRollNo();
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public Q2VariableScope() {
+        System.out.println(rollno);
+        printRollNo();
+    }
 
-		Q2VariableScope obj = new Q2VariableScope();
-		// System.out.println(obj.rollno);
-		// obj.printRollNo();
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-		Q2TestProtected obj1 = new Q2TestProtected();
-		// System.out.println(obj1.rollno);
-		// obj1.printRollNo();
-	}
+        Q2VariableScope obj = new Q2VariableScope();
+        // System.out.println(obj.rollno);
+        // obj.printRollNo();
+
+        Q2TestProtected obj1 = new Q2TestProtected();
+        // System.out.println(obj1.rollno);
+        // obj1.printRollNo();
+    }
 
 }
 
