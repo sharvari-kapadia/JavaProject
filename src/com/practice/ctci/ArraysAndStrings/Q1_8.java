@@ -41,7 +41,8 @@ public class Q1_8 {
 		if(mainString.length() != rotatedString.length()) {
 			return false;
 		}
-		String newRotatedString = new String(rotatedString + rotatedString);
+		String newRotatedString;
+		newRotatedString = new String(rotatedString + rotatedString);
 		return isSubstring(mainString, newRotatedString);
 	}
 	
