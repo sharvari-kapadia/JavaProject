@@ -1,4 +1,8 @@
-// 4.23.2015: To find if one string is a permutation of other
+/*
+ * 4.23.2015
+ * Implement a function void reverse(char* str) in C or C++ which reverses a null-terminated string.
+ */
+
 package com.practice.ctci.ArraysAndStrings;
 
 import java.util.Arrays;

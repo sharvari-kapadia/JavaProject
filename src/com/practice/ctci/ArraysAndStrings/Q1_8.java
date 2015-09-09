@@ -1,4 +1,10 @@
-// 4.28.2015: to determine is one string is rotation of another string
+/*
+ * 4.28.2015
+ * Assume you have a method isSubstring which checks if one word is a substring of another. Given two strings,
+ * s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring
+ * (e.g.,"waterbottle" is a rotation of "erbottlewat").
+ */
+
 package com.practice.ctci.ArraysAndStrings;
 
 public class Q1_8 {
@@ -18,7 +24,7 @@ public class Q1_8 {
         return true;
     }
 
-    // checks whether str1 is substring of str2
+    // Checks whether str1 is substring of str2
     public boolean isSubstring(String subStr, String mainStr) {
 
         int subStrLen = subStr.length();
@@ -39,7 +45,7 @@ public class Q1_8 {
         return false;
     }
 
-    // checks if a string is rotation of another string
+    // Checks if a string is rotation of another string
     public boolean isRotation(String rotatedString, String mainString) {
 
         if (mainString.length() != rotatedString.length()) {

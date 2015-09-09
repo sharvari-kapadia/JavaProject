@@ -1,4 +1,8 @@
-// 4.27.2015: Set row and column 0 of elements with value 0
+/*
+  * 4.27.2015
+  * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
+  */
+
 package com.practice.ctci.ArraysAndStrings;
 
 import java.util.HashMap;
@@ -48,7 +52,7 @@ public class Q1_7 {
         System.out.println();
     }
 
-    // generates matrix with random values between [0, 4]
+    // Generates matrix with random values between [0, 4]
     public int[][] generateMatrix() {
 
         int[][] matrix = new int[rows][cols];
@@ -60,7 +64,7 @@ public class Q1_7 {
         return matrix;
     }
 
-    // adds row and column position of elements with 0 value to zeroRows and zeroCols respectively
+    // Adds row and column position of elements with 0 value to zeroRows and zeroCols respectively
     private void getZeroPositions(int[][] matrix, HashMap<Integer, Boolean> zeroRows, HashMap<Integer, Boolean> zeroCols) {
 
         for (int i = 0; i < rows; i++) {

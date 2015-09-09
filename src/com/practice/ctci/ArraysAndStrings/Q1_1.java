@@ -1,4 +1,8 @@
-// 4.21.2015: To determine if string has unique characters
+/*
+ * 4.21.2015
+ * Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data
+ * structures?
+ */
 package com.practice.ctci.ArraysAndStrings;
 
 import java.util.Arrays;
@@ -11,7 +15,7 @@ public class Q1_1 {
         this.str = str;
     }
 
-    // brute force method
+    // Brute force method
     public boolean areStringCharUniqueBruteForce() {
 
         int strLen = str.length();
@@ -26,7 +30,7 @@ public class Q1_1 {
         return true;
     }
 
-    // using Array
+    // Using Array
     public boolean areStringCharUniqueUsingArray() {
 
         boolean[] charArray = new boolean[256];
@@ -44,7 +48,7 @@ public class Q1_1 {
         return true;
     }
 
-    // using hashMap
+    // Using HashMap
     public boolean areStringCharUniqueUsingHashmap() {
 
         HashMap<Character, Boolean> hashmap = new HashMap<Character, Boolean>();
@@ -61,7 +65,7 @@ public class Q1_1 {
         return true;
     }
 
-    // without using data structure
+    // Without using data structure
     public boolean areStringCharUniqueWithoutDataStructure() {
 
         char[] charArray = str.toCharArray();

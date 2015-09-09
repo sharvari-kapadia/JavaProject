@@ -1,4 +1,8 @@
-// 4.22.2015: Reverse a string
+/*
+ * 4.22.2015
+ * Given two strings, write a method to  decide if one is a permutation of the other.
+ */
+
 package com.practice.ctci.ArraysAndStrings;
 
 public class Q1_2 {
