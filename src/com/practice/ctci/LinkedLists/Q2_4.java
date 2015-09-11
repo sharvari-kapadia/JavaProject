@@ -21,6 +21,7 @@ public class Q2_4 {
         String givenNodeData = (String)node.data;
 
         while(currentNode != null) {
+
             String currentNodeData = (String)currentNode.data;
             int compareResult = currentNodeData.compareTo(givenNodeData);
             currentNode = currentNode.next;
