@@ -65,11 +65,27 @@ public class MyLinkedList <T> {
     }
 
     // Remove last
-    public void removeLast(T data) {
+    public void removeLast() {
+
     }
 
     // Remove first
-    public void removeFirst(T data) {
+    public void removeFirst() {
+
+        if(getSize() == 0) {
+            return;
+        }
+
+        if(getSize() == 1) {
+            head = null;
+            tail = null;
+        } else {
+            Node temp = head;
+            head = head.next;
+            temp.next = null;
+        }
+
+        setSize(getSize() - 1);
     }
 
     // Remove given node
@@ -109,25 +125,48 @@ public class MyLinkedList <T> {
         setSize(getSize() - 1);
     }
 
-    // Print the given myLinkedList
-    public static void print(MyLinkedList myLinkedList) {
-        MyLinkedList.Node current = myLinkedList.head;
-        while(current != null) {
-            System.out.print(current.data);
-            if(current != myLinkedList.tail) {
-                System.out.print(" -> ");
-            }
-            current = current.next;
+    public void reset() {
+        head = null;
+        tail = null;
+        setSize(0);
+    }
+
+    public void append(MyLinkedList otherLinkedList) {
+
+        if(otherLinkedList.getSize() == 0) {
+            return;
         }
-        System.out.println("");
+
+        if(getSize() == 0) {
+            head = otherLinkedList.getHead();
+            tail = otherLinkedList.getTail();
+        } else {
+            tail.next = otherLinkedList.getHead();
+            tail = otherLinkedList.getTail();
+        }
+        setSize(getSize() + otherLinkedList.getSize());
+        otherLinkedList.reset();
     }
 
     public static void main(String[] args) throws Exception {
         MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
         myLinkedList.addLast(1);
-        myLinkedList.addLast(1);
-        myLinkedList.remove(myLinkedList.tail);
         myLinkedList.addLast(2);
-        print(myLinkedList);
+        myLinkedList.addLast(3);
+        myLinkedList.addLast(4);
+        myLinkedList.addLast(5);
+        myLinkedList.addLast(6);
+        Util.printMyLinkedList(myLinkedList);
+
+        MyLinkedList<Integer> myLinkedList1 = new MyLinkedList<Integer>();
+        myLinkedList1.addLast(11);
+        myLinkedList1.addLast(21);
+        myLinkedList1.addLast(31);
+        myLinkedList1.addLast(41);
+        myLinkedList1.addLast(51);
+        Util.printMyLinkedList(myLinkedList1);
+
+        myLinkedList.append(myLinkedList1);
+        Util.printMyLinkedList(myLinkedList);
     }
 }

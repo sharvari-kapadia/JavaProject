@@ -7,6 +7,7 @@
 package com.practice.ctci.LinkedLists;
 
 import com.practice.ctci.tools.MyLinkedList;
+import com.practice.ctci.tools.Util;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -46,64 +47,20 @@ public class Q2_1 {
         }
     }
 
-    // Create LinkedList
-    public static LinkedList createLinkedList() {
-
-        LinkedList linkedList = new LinkedList();
-        linkedList.add("a");
-        linkedList.add("c");
-        linkedList.add("c");
-        linkedList.add("f");
-        linkedList.add("k");
-        linkedList.add("b");
-        linkedList.add("a");
-
-        return linkedList;
-    }
-
-    // Create MyLinkedList
-    public static MyLinkedList createMyLinkedList() {
-
-        MyLinkedList<String> myLinkedList = new MyLinkedList<String>();
-        myLinkedList.addLast("a");
-        myLinkedList.addLast("c");
-        myLinkedList.addLast("d");
-        myLinkedList.addLast("f");
-        myLinkedList.addLast("d");
-        myLinkedList.addLast("c");
-        myLinkedList.addLast("a");
-
-        return myLinkedList;
-    }
-
-    // Print given LinkedList
-    public static void print(LinkedList linkedList) {
-
-        ListIterator listIterator = linkedList.listIterator();
-        int length = linkedList.size();
-        while (listIterator.hasNext()) {
-            System.out.print(listIterator.next());
-            if(listIterator.nextIndex() != length) {
-                System.out.print(" -> ");
-            }
-        }
-        System.out.println("");
-    }
-
     public static void main(String[] args) throws Exception {
 
         // Method 1: using temporary buffer - HashSet
-        LinkedList linkedList1 = createLinkedList();
-        print(linkedList1);
+        LinkedList<String> linkedList1 = Util.createStringLinkedList();
+        Util.printLinkedList(linkedList1);
         removeDuplicatesFromUnsortedLinkedListUsingHashSet(linkedList1);
-        print(linkedList1);
+        Util.printLinkedList(linkedList1);
 
         System.out.println("---------------------------------");
 
         // Method 2: Without using temporary buffer
-        MyLinkedList myLinkedList2 = createMyLinkedList();
-        MyLinkedList.print(myLinkedList2);
+        MyLinkedList<String> myLinkedList2 = Util.createStringMyLinkedList();
+        Util.printMyLinkedList(myLinkedList2);
         removeDuplicatesFromUnsortedLinkedList(myLinkedList2);
-        MyLinkedList.print(myLinkedList2);
+        Util.printMyLinkedList(myLinkedList2);
     }
 }
