@@ -64,4 +64,20 @@ public class Util {
         }
         System.out.println("");
     }
+
+    // Prints circular linkedList
+    // Use this method BEFORE making the circular connection within the linkedList
+    public static void printMyCircularLinkedList(MyLinkedList myLinkedList, MyLinkedList.Node beginning) {
+
+        MyLinkedList.Node current = myLinkedList.getHead();
+        System.out.println("");
+        while(current != null) {
+            System.out.print(current.data);
+            if(current != myLinkedList.getTail()) {
+                System.out.print(" -> ");
+            }
+            current = current.next;
+        }
+        System.out.print(" -> " + beginning.data + "\n");
+    }
 }
