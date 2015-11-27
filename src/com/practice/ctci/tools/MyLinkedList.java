@@ -156,7 +156,7 @@ public class MyLinkedList <T> {
         myLinkedList.addLast(4);
         myLinkedList.addLast(5);
         myLinkedList.addLast(6);
-        Util.printMyLinkedList(myLinkedList);
+        LinkedListUtil.printMyLinkedList(myLinkedList);
 
         MyLinkedList<Integer> myLinkedList1 = new MyLinkedList<Integer>();
         myLinkedList1.addLast(11);
@@ -164,9 +164,9 @@ public class MyLinkedList <T> {
         myLinkedList1.addLast(31);
         myLinkedList1.addLast(41);
         myLinkedList1.addLast(51);
-        Util.printMyLinkedList(myLinkedList1);
+        LinkedListUtil.printMyLinkedList(myLinkedList1);
 
         myLinkedList.append(myLinkedList1);
-        Util.printMyLinkedList(myLinkedList);
+        LinkedListUtil.printMyLinkedList(myLinkedList);
     }
 }

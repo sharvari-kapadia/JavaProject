@@ -4,7 +4,7 @@
  */
 
 package com.practice.ctci.LinkedLists;
-import com.practice.ctci.tools.Util;
+import com.practice.ctci.tools.LinkedListUtil;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -104,13 +104,13 @@ public class Q2_7 {
     public static void main(String[] args) {
 
         LinkedList<String> linkedList1 = new LinkedList<String>(Arrays.asList("r", "a", "c", "e", "c", "a", "r"));
-        Util.printLinkedList(linkedList1);
+        LinkedListUtil.printLinkedList(linkedList1);
         printPalindromeResult(isPalindromeByReversingLinkedList(linkedList1));
         printPalindromeResult(isPalindromeUsingStack1(linkedList1));
         printPalindromeResult(isPalindromeUsingStack2(linkedList1));
 
         LinkedList<String> linkedList2 = new LinkedList<String>(Arrays.asList("s", "h", "a", "r", "v", "a", "r", "i"));
-        Util.printLinkedList(linkedList2);
+        LinkedListUtil.printLinkedList(linkedList2);
         printPalindromeResult(isPalindromeByReversingLinkedList(linkedList2));
         printPalindromeResult(isPalindromeUsingStack1(linkedList2));
         printPalindromeResult(isPalindromeUsingStack2(linkedList2));

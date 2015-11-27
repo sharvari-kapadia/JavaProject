@@ -11,8 +11,8 @@
 
 package com.practice.ctci.LinkedLists;
 
+import com.practice.ctci.tools.LinkedListUtil;
 import com.practice.ctci.tools.MyLinkedList;
-import com.practice.ctci.tools.Util;
 
 public class Q2_6 {
 
@@ -47,7 +47,7 @@ public class Q2_6 {
 
         MyLinkedList.Node beginning = myLinkedList.getHead().next.next;
         // Print the circular linked list before pointing the tail to beginning
-        Util.printMyCircularLinkedList(myLinkedList, beginning);
+        LinkedListUtil.printMyCircularLinkedList(myLinkedList, beginning);
 
         // Pointing the tail i.e. "E" to "C" to generate linkedList A -> B -> C -> D -> E -> C
         myLinkedList.getTail().next = beginning;

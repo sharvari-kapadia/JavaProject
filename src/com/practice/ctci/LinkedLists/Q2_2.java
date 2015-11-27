@@ -5,7 +5,7 @@
 
 package com.practice.ctci.LinkedLists;
 
-import com.practice.ctci.tools.Util;
+import com.practice.ctci.tools.LinkedListUtil;
 
 import java.security.InvalidParameterException;
 import java.util.LinkedList;
@@ -39,8 +39,8 @@ public class Q2_2 {
     }
 
     public static void main(String[] args) {
-        LinkedList<String> linkedList = Util.createStringLinkedList();
-        Util.printLinkedList(linkedList);
+        LinkedList<String> linkedList = LinkedListUtil.createStringLinkedList();
+        LinkedListUtil.printLinkedList(linkedList);
         int k = 4;
         System.out.println("kth to last element of the LinkedList is " + getKthElement(linkedList, k) + ", where k = " + k + "\n");
     }

@@ -3,7 +3,7 @@ package com.practice.ctci.tools;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-public class Util {
+public class LinkedListUtil {
 
     // Create LinkedList
     public static LinkedList<String> createStringLinkedList() {

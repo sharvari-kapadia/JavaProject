@@ -14,7 +14,7 @@
 
 package com.practice.ctci.LinkedLists;
 
-import com.practice.ctci.tools.Util;
+import com.practice.ctci.tools.LinkedListUtil;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -100,7 +100,7 @@ public class Q2_5 {
         //Util.printLinkedList(convertIntToForwardLinkedList(617));
         //Util.printLinkedList(convertIntToForwardLinkedList(295));
 
-        Util.printLinkedList(addNumbersReverseOrder(reverseLinkedList1, reverseLinkedList2));
-        Util.printLinkedList(addNumbersForwardOrder(forwardLinkedList1, forwardLinkedList2));
+        LinkedListUtil.printLinkedList(addNumbersReverseOrder(reverseLinkedList1, reverseLinkedList2));
+        LinkedListUtil.printLinkedList(addNumbersForwardOrder(forwardLinkedList1, forwardLinkedList2));
     }
 }

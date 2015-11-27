@@ -6,8 +6,8 @@
 
 package com.practice.ctci.LinkedLists;
 
+import com.practice.ctci.tools.LinkedListUtil;
 import com.practice.ctci.tools.MyLinkedList;
-import com.practice.ctci.tools.Util;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -50,17 +50,17 @@ public class Q2_1 {
     public static void main(String[] args) throws Exception {
 
         // Method 1: using temporary buffer - HashSet
-        LinkedList<String> linkedList1 = Util.createStringLinkedList();
-        Util.printLinkedList(linkedList1);
+        LinkedList<String> linkedList1 = LinkedListUtil.createStringLinkedList();
+        LinkedListUtil.printLinkedList(linkedList1);
         removeDuplicatesFromUnsortedLinkedListUsingHashSet(linkedList1);
-        Util.printLinkedList(linkedList1);
+        LinkedListUtil.printLinkedList(linkedList1);
 
         System.out.println("---------------------------------");
 
         // Method 2: Without using temporary buffer
-        MyLinkedList<String> myLinkedList2 = Util.createStringMyLinkedList();
-        Util.printMyLinkedList(myLinkedList2);
+        MyLinkedList<String> myLinkedList2 = LinkedListUtil.createStringMyLinkedList();
+        LinkedListUtil.printMyLinkedList(myLinkedList2);
         removeDuplicatesFromUnsortedLinkedList(myLinkedList2);
-        Util.printMyLinkedList(myLinkedList2);
+        LinkedListUtil.printMyLinkedList(myLinkedList2);
     }
 }

@@ -11,8 +11,8 @@
 
 package com.practice.ctci.LinkedLists;
 
+import com.practice.ctci.tools.LinkedListUtil;
 import com.practice.ctci.tools.MyLinkedList;
-import com.practice.ctci.tools.Util;
 
 public class Q2_3 {
 
@@ -25,10 +25,10 @@ public class Q2_3 {
     }
 
     public static void main(String[] args) {
-        MyLinkedList<String> myLinkedList = Util.createStringMyLinkedList();
-        Util.printMyLinkedList(myLinkedList);
+        MyLinkedList<String> myLinkedList = LinkedListUtil.createStringMyLinkedList();
+        LinkedListUtil.printMyLinkedList(myLinkedList);
 
         deleteNode(myLinkedList.getHead().next.next); // passing 3rd element
-        Util.printMyLinkedList(myLinkedList);
+        LinkedListUtil.printMyLinkedList(myLinkedList);
     }
 }
