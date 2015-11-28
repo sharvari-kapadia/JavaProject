@@ -13,12 +13,12 @@ public class OrderedStack {
 
     Stack<Integer> myStack;
 
-    OrderedStack() {
+    public OrderedStack() {
         myStack = new Stack<Integer>();
     }
 
     public void push(int item) {
-        if(item <= myStack.peek()) {
+        if(((!myStack.isEmpty()) && (item <= myStack.peek())) || myStack.isEmpty()) {
             myStack.push(item);
         } else {
             throw new IllegalArgumentException("This item cannot be pushed to the stack since it is larger than the " +
@@ -31,5 +31,9 @@ public class OrderedStack {
             throw new StackUnderflowException("Stack is empty. No elements to pop.");
         }
         return myStack.pop();
+    }
+
+    public void printStack() {
+        StackUtil.printStack(myStack);
     }
 }

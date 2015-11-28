@@ -3,5 +3,12 @@ package com.practice.ctci.exceptions;
 /**
  * Created by SKapadia on 11/16/2015.
  */
-public class StackUnderFlowException {
+public class StackUnderflowException extends Exception{
+    public StackUnderflowException() {
+        super();
+    }
+
+    public StackUnderflowException(String message) {
+        super(message);
+    }
 }
