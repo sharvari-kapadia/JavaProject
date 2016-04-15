@@ -5,7 +5,7 @@
 
 package com.practice.ctci.LinkedLists;
 
-import com.practice.ctci.tools.LinkedListUtil;
+import com.practice.ctci.datastructures.LinkedListUtil;
 
 import java.security.InvalidParameterException;
 import java.util.LinkedList;

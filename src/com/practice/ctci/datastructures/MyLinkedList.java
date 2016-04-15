@@ -1,4 +1,4 @@
-package com.practice.ctci.tools;
+package com.practice.ctci.datastructures;
 
 import java.security.InvalidParameterException;
 

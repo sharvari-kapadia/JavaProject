@@ -11,8 +11,8 @@
 
 package com.practice.ctci.LinkedLists;
 
-import com.practice.ctci.tools.LinkedListUtil;
-import com.practice.ctci.tools.MyLinkedList;
+import com.practice.ctci.datastructures.LinkedListUtil;
+import com.practice.ctci.datastructures.MyLinkedList;
 
 public class Q2_6 {
 

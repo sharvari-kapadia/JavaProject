@@ -6,8 +6,8 @@
 
 package com.practice.ctci.LinkedLists;
 
-import com.practice.ctci.tools.LinkedListUtil;
-import com.practice.ctci.tools.MyLinkedList;
+import com.practice.ctci.datastructures.LinkedListUtil;
+import com.practice.ctci.datastructures.MyLinkedList;
 
 import java.util.HashSet;
 import java.util.LinkedList;

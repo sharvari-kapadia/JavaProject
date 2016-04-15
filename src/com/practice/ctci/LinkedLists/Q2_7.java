@@ -4,7 +4,7 @@
  */
 
 package com.practice.ctci.LinkedLists;
-import com.practice.ctci.tools.LinkedListUtil;
+import com.practice.ctci.datastructures.LinkedListUtil;
 
 import java.util.Arrays;
 import java.util.LinkedList;
