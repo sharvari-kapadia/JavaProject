@@ -12,7 +12,7 @@
 package com.practice.ctci.StacksAndQueues;
 
 import com.practice.ctci.exceptions.StackUnderflowException;
-import com.practice.ctci.tools.OrderedStack;
+import com.practice.ctci.datastructures.OrderedStack;
 
 public class Q3_4 {
 

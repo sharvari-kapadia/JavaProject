@@ -7,7 +7,7 @@
 
 package com.practice.ctci.StacksAndQueues;
 
-import com.practice.ctci.tools.StackUtil;
+import com.practice.ctci.datastructures.StackUtil;
 
 import java.util.Stack;
 
