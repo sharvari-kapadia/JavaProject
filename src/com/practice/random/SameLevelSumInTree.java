@@ -1,5 +1,7 @@
 package com.practice.random;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
 
 /**
@@ -18,8 +20,9 @@ public class SameLevelSumInTree {
     }
 
     private Node root;
+    private Direction lastDirection = Direction.RIGHT;
     private enum Direction {
-        LEFT, RIGHT;
+        LEFT, RIGHT
     }
 
     SameLevelSumInTree() {
@@ -27,11 +30,21 @@ public class SameLevelSumInTree {
     }
 
     private Direction getDirection() {
+
+        // for random tree
         if(new Random().nextBoolean()) {
             return Direction.LEFT;
         } else {
             return Direction.RIGHT;
         }
+
+        // for fixed tree
+        /*if(lastDirection.equals(Direction.RIGHT)) {
+            lastDirection = Direction.LEFT;
+        } else {
+            lastDirection = Direction.RIGHT;
+        }
+        return lastDirection;*/
     }
 
     public void addNode(int data) {
@@ -43,6 +56,7 @@ public class SameLevelSumInTree {
         }
 
         Node current = root;
+
         while(current != null) {
 
             if(current.left == null) {
@@ -57,14 +71,63 @@ public class SameLevelSumInTree {
                 } else {
                     current = current.right;
                 }
-
             }
         }
-        return;
+    }
+
+    public void printSameLevelSum() {
+
+        class NodeAndLevel {
+
+            Node node;
+            int level;
+
+            NodeAndLevel(Node node, int level) {
+                this.node = node;
+                this.level = level;
+            }
+        }
+
+        int currentLevel = 0;
+        int sum = 0;
+        NodeAndLevel nodeAndLevel;
+        Node node;
+        int level;
+
+        Queue<NodeAndLevel> queue = new LinkedList<NodeAndLevel>();
+        queue.add(new NodeAndLevel(root, currentLevel));
+
+        while(!queue.isEmpty()) {
+
+            nodeAndLevel = queue.remove();
+            node = nodeAndLevel.node;
+            level = nodeAndLevel.level;
+
+            if(level == currentLevel) {
+                sum = sum + node.data;
+            } else {
+                currentLevel++;
+                System.out.println(sum);
+                sum = node.data;
+            }
+
+            level++;
+            if(node.left != null) {
+                queue.add(new NodeAndLevel(node.left, level));
+            }
+
+            if(node.right != null) {
+                queue.add(new NodeAndLevel(node.right, level));
+            }
+        }
+        // printing the last sum
+        System.out.println(sum);
+
     }
 
     public static void main(String[] args) {
         SameLevelSumInTree tree = new SameLevelSumInTree();
+
         tree.addNode(1);
         tree.addNode(2);
         tree.addNode(3);
@@ -74,11 +137,8 @@ public class SameLevelSumInTree {
         tree.addNode(7);
         tree.addNode(8);
         tree.addNode(9);
-        tree.addNode(10);
-        tree.addNode(11);
-        tree.addNode(12);
 
-        System.out.println();
+        tree.printSameLevelSum();
     }
 
 }
