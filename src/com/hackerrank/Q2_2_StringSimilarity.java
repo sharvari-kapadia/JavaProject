@@ -1,4 +1,4 @@
-package com.practice.hackerrank;
+package com.hackerrank;
 
 /**
  * Created with IntelliJ IDEA.

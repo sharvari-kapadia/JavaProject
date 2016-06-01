@@ -8,7 +8,6 @@ public class Q2VariableScope extends Q2TestProtected {
     }
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
 
         Q2VariableScope obj = new Q2VariableScope();
         // System.out.println(obj.rollno);

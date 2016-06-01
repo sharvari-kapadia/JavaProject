@@ -1,4 +1,4 @@
-package com.practice.interview;
+package com.interview;
 
 /**
  * Created by SKapadia on 4/20/2016.
