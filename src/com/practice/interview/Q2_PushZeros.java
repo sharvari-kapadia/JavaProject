@@ -1,9 +1,9 @@
-package com.practice.random;
+package com.practice.interview;
 
 /**
  * Created by SKapadia on 4/25/2016.
  */
-public class PushZeros {
+public class Q2_PushZeros {
 
     public static int[] pushZeros(int[] array) {
         int toPointer = 0;
@@ -50,7 +50,7 @@ public class PushZeros {
 
     public static void main(String[] args) {
         int[] array = {1, 2, 0, 0, 3, 4, 0, 5, 6, 0, 0, 7};
-        PushZeros.pushZeros(array);
+        Q2_PushZeros.pushZeros(array);
         printArray(array);
     }
 }

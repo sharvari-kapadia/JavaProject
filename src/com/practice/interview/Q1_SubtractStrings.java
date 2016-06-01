@@ -1,9 +1,9 @@
-package com.practice.random;
+package com.practice.interview;
 
 /**
  * Created by SKapadia on 4/20/2016.
  */
-public class SubtractStrings {
+public class Q1_SubtractStrings {
 
     public static String subtract(String one, String two) throws Exception {
 
@@ -17,17 +17,16 @@ public class SubtractStrings {
             throw new Exception("Enter valid strings.");
         }
 
-        // When second is greater than first
+        // When second is greater than first, swap the numbers
         if(isSecondGreaterThanFirst(first, second)) {
             secondGreaterThanFirst = true;
 
-            //swap the numbers
             StringBuffer temp = first;
             first = second;
             second = temp;
         }
 
-        // When both strings are of different length
+        // When both strings are of different length, add 0s for padding before smaller number
         int firstLength = first.length();
         int secondLength = second.length();
         int diff = firstLength - secondLength;
@@ -39,6 +38,7 @@ public class SubtractStrings {
             second = zeros.append(second);
         }
 
+        // Subtraction
         char firstChar;
         char secondChar;
         int firstInt;
@@ -67,10 +67,19 @@ public class SubtractStrings {
 
         answer = answer.reverse();
 
+        //remove zeros from answer
+        int i;
+        for(i = 0; i < answer.length(); i++) {
+            if(answer.charAt(i) != '0') {
+                break;
+            }
+        }
+        String answerString = answer.substring(i);
+
         if(secondGreaterThanFirst) {
-            return "-" + answer.toString();
+            return "-" + answerString;
         } else {
-            return answer.toString();
+            return answerString;
         }
     }
 
@@ -112,8 +121,8 @@ public class SubtractStrings {
 
 
     public static void main(String[] args) throws Exception {
-        System.out.println(SubtractStrings.subtract("222", "111"));
-        System.out.println(SubtractStrings.subtract("222", "123"));
-        System.out.println(SubtractStrings.subtract("3222", "333"));
+        //System.out.println(Q1_SubtractStrings.subtract("222", "111"));
+        System.out.println(Q1_SubtractStrings.subtract("222", "123"));
+        //System.out.println(Q1_SubtractStrings.subtract("3222", "333"));
     }
 }
