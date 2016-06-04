@@ -1,4 +1,4 @@
-package com.practice.random;
+package com.practice;
 
 import java.util.*;
 /**

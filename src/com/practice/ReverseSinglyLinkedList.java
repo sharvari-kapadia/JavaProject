@@ -1,4 +1,4 @@
-package com.practice.random;
+package com.practice;
 
 /**
  * Created by SKapadia on 4/25/2016.
