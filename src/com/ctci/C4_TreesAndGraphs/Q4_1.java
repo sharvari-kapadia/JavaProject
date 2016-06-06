@@ -1,5 +1,5 @@
 /*
- * 11.30.2015
+ * 6.4.2015
  * Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is
  * defined to be a tree such that the heights of the two subtrees of any node never differ by more than one.
 */
@@ -28,22 +28,13 @@ public class Q4_1 {
 
     public static void main(String[] args) {
 
-        // Positive use case
-        BinarySearchTree tree = new BinarySearchTree();
-        tree.insert(7);
-        tree.insert(5);
-        tree.insert(12);
-        tree.insert(3);
-        tree.insert(6);
-        tree.insert(9);
-        tree.insert(15);
+        // case1
+        BinaryTree tree = new BinaryTree();
         tree.insert(1);
+        tree.insert(2);
+        tree.insert(3);
         tree.insert(4);
-        tree.insert(8);
-        tree.insert(10);
-        tree.insert(13);
-        tree.insert(17);
-        tree.print();
+        tree.insert(5);
 
         if(Q4_1.isBalanced(tree)) {
             System.out.println("The tree IS balanced.");
@@ -51,22 +42,15 @@ public class Q4_1 {
             System.out.println("The tree IS NOT balanced.");
         }
 
-        // Negative use case
+        System.out.println();
+
+        // case2
         BinaryTree tree2 = new BinaryTree();
-        tree2.insert(7);
-        tree2.insert(5);
-        tree2.insert(12);
-        tree2.insert(3);
-        tree2.insert(6);
-        tree2.insert(9);
-        tree2.insert(15);
-        tree2.insert(1);
-        tree2.insert(4);
-        tree2.insert(8);
-        tree2.insert(10);
-        tree2.insert(13);
-        tree2.insert(17);
-        //tree2.print();
+        tree2.insert2(1);
+        tree2.insert2(2);
+        tree2.insert2(3);
+        tree2.insert2(4);
+        tree2.insert2(5);
 
         if(Q4_1.isBalanced(tree2)) {
             System.out.println("The tree IS balanced.");
