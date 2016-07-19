@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * Created by SKapadia on 6/21/2016.
  */
-public class CircularLinkedList {
+public class LinkedListWithLoop {
 
     private class Node {
 
@@ -20,7 +20,8 @@ public class CircularLinkedList {
 
     private Node head;
     private Node tail;
-    CircularLinkedList() {
+
+    LinkedListWithLoop() {
         this.head = null;
         this.tail = null;
     }
@@ -60,7 +61,7 @@ public class CircularLinkedList {
         return null;
     }
 
-    public boolean isCircular() {
+    public boolean hasLoop() {
         return getCollision() != null;
     }
 
@@ -79,14 +80,14 @@ public class CircularLinkedList {
         return null;
     }
 
-    public void createNonCircularLinkedList(ArrayList<Integer> dataList) {
+    public void createLinkedListWithoutLoop(ArrayList<Integer> dataList) {
 
         dataList.forEach(this::add);
     }
 
-    public void createCircularLinkedList(ArrayList<Integer> dataList, int intersectionIndex) {
+    public void createLinkedListWithLoop(ArrayList<Integer> dataList, int intersectionIndex) {
 
-        createNonCircularLinkedList(dataList);
+        createLinkedListWithoutLoop(dataList);
 
         //connect last node to kth (intersectionIndex) node
         Node current = head;
@@ -136,21 +137,21 @@ public class CircularLinkedList {
 
         ArrayList<Integer> dataList = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6));
         // Non-circular linked list
-        CircularLinkedList nonCircularLinkedList = new CircularLinkedList();
-        nonCircularLinkedList.createNonCircularLinkedList(dataList);
-        nonCircularLinkedList.printLinkedList();
-        boolean isCircular1 = nonCircularLinkedList.isCircular();
+        LinkedListWithLoop linkedListWithoutLoop = new LinkedListWithLoop();
+        linkedListWithoutLoop.createLinkedListWithoutLoop(dataList);
+        linkedListWithoutLoop.printLinkedList();
+        boolean isCircular1 = linkedListWithoutLoop.hasLoop();
         assert isCircular1 == false;
 
         // Circular linked list
         for(int i = 0; i < dataList.size(); i++) {
-            CircularLinkedList circularLinkedList = new CircularLinkedList();
-            circularLinkedList.createCircularLinkedList(dataList, i);
-            circularLinkedList.printLinkedList(i);
-            boolean isCircular2 = circularLinkedList.isCircular();
+            LinkedListWithLoop linkedListWithLoop = new LinkedListWithLoop();
+            linkedListWithLoop.createLinkedListWithLoop(dataList, i);
+            linkedListWithLoop.printLinkedList(i);
+            boolean isCircular2 = linkedListWithLoop.hasLoop();
             assert isCircular2 == true;
             if(isCircular2) {
-                assert circularLinkedList.getIntersection().data == dataList.get(i);
+                assert linkedListWithLoop.getIntersection().data == dataList.get(i);
             }
         }
     }
