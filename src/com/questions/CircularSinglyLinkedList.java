@@ -1,4 +1,4 @@
-package com.practice;
+package com.questions;
 
 import java.util.ArrayList;
 
@@ -212,8 +212,8 @@ public class CircularSinglyLinkedList {
         object.addLast(5);
         object.printLinkedList();
 
-        assert true == object.search(2);
-        assert false == object.search(6);
+        assert object.search(2);
+        assert !object.search(6);
 
         object.delete(2);
         object.printLinkedList();
