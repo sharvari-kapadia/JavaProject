@@ -1,6 +1,5 @@
-package com.practice;
+package com.questions;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -199,6 +198,6 @@ public class SortedCircularDoublyLinkedList {
         object.delete(4);
         object.delete(10);
         object.printLinkedList();
-        assert false == object.search(3);
+        assert !object.search(3);
     }
 }

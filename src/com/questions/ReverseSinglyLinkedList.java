@@ -1,4 +1,4 @@
-package com.practice;
+package com.questions;
 
 /**
  * Created by SKapadia on 4/25/2016.

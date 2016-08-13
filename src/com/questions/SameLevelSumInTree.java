@@ -1,4 +1,4 @@
-package com.practice;
+package com.questions;
 
 import java.util.LinkedList;
 import java.util.Queue;

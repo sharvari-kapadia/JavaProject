@@ -1,4 +1,4 @@
-package com.practice;
+package com.questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -155,7 +155,7 @@ public class YShapedLinkedList {
 
             YShapedLinkedList object2 = new YShapedLinkedList();
             LinkedList[] linkedLists = object2.createTwoYShapedLinkedLists(dataList1, dataList2, i);
-            assert object2.isYShaped(linkedLists) == true;
+            assert object2.isYShaped(linkedLists);
             assert object2.getIntersection(linkedLists).data == dataList1.get(i);
         }
     }
