@@ -1,5 +1,4 @@
-/*Example to understand Comparable and Comparator*/
-package com.practice;
+package com.practice.sorting;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -20,9 +19,9 @@ public class Fruit implements Comparable<Fruit> {
         this.quantity = quantity;
     }
 
-    public static void print(Fruit fruit) {
+    public void printFruit() {
 
-        System.out.println(fruit.name + " " + fruit.description + " " + fruit.quantity);
+        System.out.println(this.name + " " + this.description + " " + this.quantity);
     }
 
     @Override
@@ -40,6 +39,7 @@ public class Fruit implements Comparable<Fruit> {
     };
 
     public static void main(String[] args) {
+
         Fruit[] fruits = new Fruit[5];
         fruits[0] = new Fruit("banana", "banana description", 10);
         fruits[1] = new Fruit("apple", "apple description", 16);
@@ -47,16 +47,16 @@ public class Fruit implements Comparable<Fruit> {
         fruits[3] = new Fruit("mango", "mango description", 20);
         fruits[4] = new Fruit("strawberry", "strawberry description", 50);
 
-        System.out.println("Sorted by quantity: ");
+        System.out.println("Fruits sorted by quantity: ");
         Arrays.sort(fruits);
-        for(int i = 0; i < fruits.length; i++) {
-            Fruit.print(fruits[i]);
+        for (Fruit fruit : fruits) {
+            fruit.printFruit();
         }
 
-        System.out.println("\nSorted by name: ");
-        Arrays.sort(fruits, fruitNameComparator);
-        for(int i = 0; i < fruits.length; i++) {
-            Fruit.print(fruits[i]);
+        System.out.println("\nFruits sorted by name: ");
+        Arrays.sort(fruits, Fruit.fruitNameComparator);
+        for (Fruit fruit : fruits) {
+            fruit.printFruit();
         }
     }
 }
