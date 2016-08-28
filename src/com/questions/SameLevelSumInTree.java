@@ -1,5 +1,6 @@
 package com.questions;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
@@ -77,52 +78,41 @@ public class SameLevelSumInTree {
 
     public void printSameLevelSum() {
 
-        class NodeAndLevel {
+        ArrayList<Integer> sumList = new ArrayList<>();
 
-            Node node;
-            int level;
-
-            NodeAndLevel(Node node, int level) {
-                this.node = node;
-                this.level = level;
-            }
+        if(root == null) {
+            return;
         }
 
-        int currentLevel = 0;
-        int sum = 0;
-        NodeAndLevel nodeAndLevel;
+        Queue<Node> primaryQueue = new LinkedList<>();
+        Queue<Node> secondaryQueue = new LinkedList<>();
+        Queue<Node> temp;
         Node node;
-        int level;
+        primaryQueue.add(root);
 
-        Queue<NodeAndLevel> queue = new LinkedList<NodeAndLevel>();
-        queue.add(new NodeAndLevel(root, currentLevel));
+        while(!primaryQueue.isEmpty() || !secondaryQueue.isEmpty()) {
 
-        while(!queue.isEmpty()) {
+            int sum = 0;
+            while(!primaryQueue.isEmpty()) {
+                node = primaryQueue.remove();
+                sum += node.data;
 
-            nodeAndLevel = queue.remove();
-            node = nodeAndLevel.node;
-            level = nodeAndLevel.level;
+                if(node.left != null) {
+                    secondaryQueue.add(node.left);
+                }
 
-            if(level == currentLevel) {
-                sum = sum + node.data;
-            } else {
-                currentLevel++;
-                System.out.println(sum);
-                sum = node.data;
+                if(node.right != null) {
+                    secondaryQueue.add(node.right);
+                }
             }
+            sumList.add(sum);
 
-            level++;
-            if(node.left != null) {
-                queue.add(new NodeAndLevel(node.left, level));
-            }
-
-            if(node.right != null) {
-                queue.add(new NodeAndLevel(node.right, level));
-            }
+            temp = primaryQueue;
+            primaryQueue = secondaryQueue;
+            secondaryQueue = temp;
         }
-        // printing the last sum
-        System.out.println(sum);
 
+        System.out.println(sumList.toString());
     }
 
     public static void main(String[] args) {
