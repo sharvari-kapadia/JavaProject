@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  * Created by SKapadia on 9/15/2016.
- * https://leetcode.com/problems/binary-tree-inorder-traversal/
+ * https://leetcode.com/problems/binary-tree-preorder-traversal/
  */
 public class PreOrderTraversalOfTree {
 
@@ -17,6 +17,7 @@ public class PreOrderTraversalOfTree {
         TreeNode(int x) { val = x; }
     }
 
+    // Iterative method
     public List<Integer> preOrderTraversal(TreeNode root) {
 
         List<Integer> resultList = new ArrayList<>();
@@ -43,6 +44,7 @@ public class PreOrderTraversalOfTree {
         return resultList;
     }
 
+    // Recursive method
     public List<Integer> preOrderTraversal2(TreeNode root) {
 
         List<Integer> resultList = new ArrayList<>();
