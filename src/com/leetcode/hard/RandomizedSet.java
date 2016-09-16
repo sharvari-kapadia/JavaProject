@@ -1,4 +1,4 @@
-package com.leetcode.difficult;
+package com.leetcode.hard;
 
 import java.util.ArrayList;
 import java.util.HashMap;
