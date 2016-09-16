@@ -8,7 +8,7 @@ import java.util.Stack;
  * Created by SKapadia on 9/15/2016.
  * https://leetcode.com/problems/binary-tree-inorder-traversal/
  */
-public class InOrderTraversalOfTree {
+public class PreOrderTraversalOfTree {
 
     public class TreeNode {
         int val;
@@ -17,7 +17,7 @@ public class InOrderTraversalOfTree {
         TreeNode(int x) { val = x; }
     }
 
-    public List<Integer> inOrderTraversal(TreeNode root) {
+    public List<Integer> preOrderTraversal(TreeNode root) {
 
         List<Integer> resultList = new ArrayList<>();
         if(root == null) {
@@ -31,10 +31,10 @@ public class InOrderTraversalOfTree {
         while(!stack.isEmpty()) {
 
             node = stack.pop();
+            resultList.add(node.val);
             if(node.right != null) {
                 stack.add(node.right);
             }
-            resultList.add(node.val);
             if(node.left != null) {
                 stack.add(node.left);
             }
@@ -43,21 +43,22 @@ public class InOrderTraversalOfTree {
         return resultList;
     }
 
-    public List<Integer> inOrderTraversal2(TreeNode root) {
+    public List<Integer> preOrderTraversal2(TreeNode root) {
 
         List<Integer> resultList = new ArrayList<>();
-        return _inOrderTraversal(root, resultList);
+        return _preOrderTraversal(root, resultList);
     }
 
-    private List<Integer> _inOrderTraversal(TreeNode root, List<Integer> resultList) {
+    private List<Integer> _preOrderTraversal(TreeNode root, List<Integer> resultList) {
 
         if(root == null) {
             return resultList;
         }
 
-        _inOrderTraversal(root.left, resultList);
         resultList.add(root.val);
-        _inOrderTraversal(root.right, resultList);
+        _preOrderTraversal(root.left, resultList);
+        _preOrderTraversal(root.right, resultList);
+
         return resultList;
     }
 }
