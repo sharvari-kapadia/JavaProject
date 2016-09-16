@@ -2,6 +2,7 @@ package com.leetcode.easy;
 
 /**
  * Created by SKapadia on 9/15/2016.
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
  */
 public class RemoveDuplicatesFromSortedList {
 
