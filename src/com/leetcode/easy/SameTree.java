@@ -16,11 +16,6 @@ public class SameTree {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
 
-        return _isSameTree(p, q);
-    }
-
-    private boolean _isSameTree(TreeNode p, TreeNode q) {
-
         if(p == null && q == null) {
             return true;
         }

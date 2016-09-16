@@ -2,6 +2,8 @@ package com.leetcode.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Created by SKapadia on 6/27/2016.
@@ -83,17 +85,45 @@ public class InvertBinaryTree {
         return getRoot();
     }
 
+    // Iterative method
     public Node invertTree(Node root) {
+
         if(root == null) {
-            return root;
+            return null;
+        }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        Node node;
+        Node temp;
+
+        while(!queue.isEmpty()) {
+            node = queue.remove();
+            temp = node.left;
+            node.left = node.right;
+            node.right = temp;
+            if(node.left != null) {
+                queue.add(node.left);
+            }
+            if(node.right != null) {
+                queue.add(node.right);
+            }
+        }
+        return root;
+    }
+
+    // Recursive method
+    public Node invertTree2(Node root) {
+        if(root == null) {
+            return null;
         }
 
         Node temp = root.left;
         root.left = root.right;
         root.right = temp;
 
-        invertTree(root.left);
-        invertTree(root.right);
+        invertTree2(root.left);
+        invertTree2(root.right);
 
         return root;
     }
