@@ -84,6 +84,7 @@ public class StringToInteger {
         assert 2147483647 == object.myAtoi("10522545459");
         assert 2147483647 == object.myAtoi("34843903489034803483410522545459");
         assert -2147483648 == object.myAtoi("-834734810522545459");
+        assert 0 == object.myAtoi("-0");
     }
 
 }
