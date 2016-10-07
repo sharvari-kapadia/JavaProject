@@ -5,19 +5,19 @@ package com.util.datastructures;
  */
 public class BinarySearchTree {
 
-    private Node root;
+    public Node root;
     private enum Direction {
         LEFT, RIGHT
-    };
+    }
 
     public BinarySearchTree() {
         root = null;
     }
 
-    private class Node {
-        private int data;
-        private Node left;
-        private Node right;
+    public class Node {
+        public int data;
+        public Node left;
+        public Node right;
 
         public Node(int data, Node left, Node right) {
             this.data = data;

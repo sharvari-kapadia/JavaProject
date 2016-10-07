@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class BinaryTree {
 
-    private Node root;
+    public Node root;
     private Random random;
     private Direction lastDirection;
 
@@ -17,14 +17,14 @@ public class BinaryTree {
     }
 
     private enum Direction {
-        LEFT, RIGHT;
+        LEFT, RIGHT
     }
 
-    private class Node {
+    public class Node {
 
-        private int data;
-        private Node left;
-        private Node right;
+        public int data;
+        public Node left;
+        public Node right;
 
         Node(int data) {
             this.data = data;
