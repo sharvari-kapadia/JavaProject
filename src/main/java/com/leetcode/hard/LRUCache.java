@@ -9,6 +9,8 @@ import java.util.LinkedList;
  */
 public class LRUCache {
 
+    public int counter;
+
     public class ListNode {
         int key;
         int value;
@@ -49,6 +51,7 @@ public class LRUCache {
             node = myMap.get(key);
             myMap.remove(key);
             myList.remove(node);
+            node.value = value;
         } else {
             node = new ListNode(key, value);
         }
