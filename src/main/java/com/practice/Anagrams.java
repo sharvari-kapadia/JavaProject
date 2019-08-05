@@ -3,7 +3,7 @@
   output = {{pots, stop}, {dog, god}, {bare, bear}, {balm, lamb}, {looped, poodle}
 * */
 
-package com.questions;
+package com.practice;
 
 import java.util.ArrayList;
 import java.util.Arrays;

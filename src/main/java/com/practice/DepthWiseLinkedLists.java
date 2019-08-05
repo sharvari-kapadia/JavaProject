@@ -3,7 +3,7 @@
  * Given a binary tree, design an algorithm which creates a linked list of all the nodes in each path
  */
 
-package com.questions;
+package com.practice;
 
 import java.util.ArrayList;
 import java.util.Arrays;

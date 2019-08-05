@@ -1,4 +1,4 @@
-package com.questions;
+package com.practice;
 
 /**
  * Created by skapadia on 9/28/2016.

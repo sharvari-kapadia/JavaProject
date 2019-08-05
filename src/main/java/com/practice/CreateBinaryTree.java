@@ -9,7 +9,7 @@
 *           20      50      true
 * Output: binary tree
 * */
-package com.questions;
+package com.practice;
 
 import java.util.HashMap;
 
